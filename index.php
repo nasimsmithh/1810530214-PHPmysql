@@ -20,6 +20,8 @@ $mahasiswa = query("SELECT * FROM mahasiswa")
   </head>
   <body>
     <div class="container">	
+    	<a href="create.php" class="btn btn-primary">Tambah Data</a>
+    	<br><br>
     		<table cellspacing="0" cellpadding="10" class="table align-middle table-bordered">
     				<tr>
     					<th>No.</th>
@@ -37,12 +39,8 @@ $mahasiswa = query("SELECT * FROM mahasiswa")
     					<td><?= $row["nama_mahasiswa"]; ?></td>
     					<td><?= $row["prodi"]; ?></td>
     					<td>	
-    						<a href="">
-    							<button type="button" class="btn btn-danger">Hapus</button>
-    						</a>
-    						<a href="">
-    							<button type="button" class="btn btn-warning">Ubah</button>
-    						</a>
+    						<a href="delete.php?nim=<?= $row["nim"]; ?>" class="btn btn-danger">Hapus</a>
+    						<a href="" class="btn btn-warning">Ubah</a>
     					</td>	
     				</tr>
     				<?php 	$i++; ?>
